@@ -9,11 +9,19 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This is simple pipelined multiply and accumulate unit to compute a*b+c using SpinalHDL as a generator. 
+
+This circuit uses the classic textbook method of multiplication with base 2. So if the numbers a and b 
+are multiplied, the sum of the version of a shifted to the left by i bits must be summed up 
+if and only if the ith bit of b is 1.
+
+These bit products, i.e. (a << i) * b(i), are determined in the individual stages of the pipeline 
+and the result is calculated step by step.
 
 ## How to test
 
-Explain how to use your project
+Simply feed a, b, and c as 4 bit unsigned integer into the unit. The latency is 3 clocks, hence the
+(hopefully correct) answer can be found at the result output after 3 cycles.
 
 ## External hardware
 
