@@ -25,7 +25,7 @@ module tt_um_SteffenReith_PiMACTop (
   // Set the directions for the IOs 
   assign uio_oe = 8'bZZZZ_0000;
 
-  //Instantiate the PiMAC
+  //Instantiate the PiMAC and connect the signals
   PiMAC piMAC (
     .a(ui_in[3:0]),
     .b(ui_in[7:4]),
