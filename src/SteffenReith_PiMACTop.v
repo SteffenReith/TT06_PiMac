@@ -19,6 +19,9 @@ module tt_um_SteffenReith_PiMACTop (
    // A reset signal for the MAC-unit
   wire reset = !(rst_n && ena);
 
+  // Don't use the IOs as outputs
+  assign uio_out = 8'b0000_0000;
+
   // Set the directions for the IOs 
   assign uio_oe = 8'bZZZZ_0000;
 
